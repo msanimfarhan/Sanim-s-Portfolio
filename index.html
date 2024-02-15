@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanim Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li> <a href="#">Home</a></li>
+                    <li> <a href="#">About</a></li>
+                    <li> <a href="#">Services</a></li>
+                    <li> <a href="#">Portfolio</a></li>
+                    <li> <a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1>Hi, I'm<br><span>Sanim Farhan</span><br> From Halifax, Canada</h1>
+            </div>
+        </div>
+    </div>
+<!-- --------about------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/User.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>As a passionate Computer Science student at Dalhousie University, I am currently gearing up for a co-op position where I can apply my robust knowledge in Data Structures and Algorithms, primarily in Java. My academic and project experiences have equipped me with a solid foundation in databases, particularly MySQL, and a practical understanding of PHP.
+                        <br>
+                        I am driven by the challenge of solving complex problems and am always seeking opportunities to apply my skills in a real-world context. I am particularly fascinated by the potential of data to transform industries and improve lives, and I am eager to contribute to innovative projects in this space.
+                        <br>
+                        I believe in continuous learning and am constantly exploring new technologies and methodologies to enhance my capabilities. I am looking for opportunities where I can collaborate with like-minded individuals to deliver impactful solutions</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Software Development </span> <br>Designing Web/App interfaces</li>
+                                <li><span>Web Development </span> <br> Web page Development</li>
+                                <li><span>App Development </span> <br>Building Android/iOS apps</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents " id="experience">
+                            <ul>
+                                <li><span>Moores Clothing, Halifax, Novascotia </span> <br>Fashion Consultant</li>
+                                <li><span>Continental, Dartmouth, Novascotia </span> <br> Key Holder</li>
+                                <li><span>SS Stone Crusher </span> <br>Manager</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents " id="education">
+                            <ul>
+                                <li><span>2022 - Current </span> <br>Computer Science at Dalhousie University</li>
+                                <li><span>2020 </span> <br> High school at Scholarshome</li>
+                                <li><span>2018 </span> <br>Middle school at Scholarshome</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------services-------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                       <p>Using HTML, CSS, PHP, and JavaScript, I create sleek, modern designs that highlight my work effectively. Let's collaborate to build a  platform that reflects my unique style and expertise.</p>
+                       <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>App development</h2>
+                       <p>With a keen eye for detail and a strong foundation in both teamwork and communication, I specialize in crafting custom app solutions that are both functional and aesthetically pleasing. Leveraging my skills in Java, HTML, CSS, SQL, and PHP, I deliver applications that not only meet but exceed user expectations. Whether you're looking for innovative approaches to UI/UX design or applying Agile and Scrum practices for project management, I am equipped to bring your vision to life.</p>
+                       <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Sotfware Development</h2>
+                       <p>"As an software developer, I bring a disciplined and detail-oriented approach to every project. My expertise in the Software Development Lifecycle, combined with a solid background in Java, HTML, CSS, SQL, and PHP, allows me to create robust and scalable platforms. My commitment to analytical thinking and organization ensures that every aspect of the design process is meticulously planned and executed, delivering solutions that embody your unique style and meet your professional needs.</p>
+                       <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+    
+</body>
+</html>
